@@ -1,0 +1,11 @@
+create table student(
+	rollno int primary key,
+    name varchar(20),
+    subject varchar(20),
+    marks int
+);
+insert into student values(1,'Jonathan','Maths',40),(2,'Logesh','Science',80),(3,'Akshay','Computer',90),(4,'Sundar','English',60);
+select * from student;
+select avg(marks) as avg_marks from student;
+
+select * from student where marks > (select avg(marks) from student);
